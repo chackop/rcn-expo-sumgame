@@ -1,6 +1,5 @@
 import React from "react";
-import { View, Text, StyleSheet } from "react-native";
-// import Game from './Game';
+import Game from "./src/component/Game";
 
 class App extends React.Component {
   state = {
@@ -13,22 +12,14 @@ class App extends React.Component {
   };
   render() {
     return (
-      // <Game
-      //   key={this.state.gameId}
-      //   onPlayAgain={this.resetGame}
-      //   randomNumberCount={6}
-      //   initialSeconds={10}
-      // />
-      <View style={styles.contain}></View>
+      <Game
+        key={this.state.gameId}
+        onPlayAgain={this.resetGame}
+        randomNumberCount={6}
+        initialSeconds={10}
+      />
     );
   }
 }
-
-const styles = StyleSheet.create({
-  contain: {
-    backgroundColor: "#ddd",
-    flex: 1,
-  },
-});
 
 export default App;
